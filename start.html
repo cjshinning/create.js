@@ -8,12 +8,12 @@
     <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
 </head>
 <body>
-    <canvas id="canvas" width="200" height="200"></canvas>
+    <canvas id="gameView" width="400" height="800"></canvas>
     <br />
     <img src="assets/preloadjs-bg-center.png" alt="">
     <script>
-        var canvas = document.querySelector('#canvas');
-        var stage = new createjs.Stage(canvas);
+        var gameView = document.querySelector('#gameView');
+        var stage = new createjs.Stage(gameView);
         // var rect = new createjs.Shape();
         // rect.graphics.beginFill('#f00').drawRect(0,0,100,100);
         // stage.addChild(rect);
@@ -27,21 +27,29 @@
         // }
         // stage.update();
 
-        var bg = new createjs.Bitmap("./assets/preloadjs-bg-center.png");
-        bg.x = 0;
-        bg.y = 0;
+        // var bg = new createjs.Bitmap("./assets/preloadjs-bg-center.png");
+        // bg.x = 0;
+        // bg.y = 0;
         //遮罩图形
-        var shape = new createjs.Shape();
-        shape.graphics.beginFill("#000").drawCircle(0, 0, 100);
-        shape.x = 100;
-        shape.y = 100;
-        bg.mask = shape;     //给图片bg添加遮罩
+        // var shape = new createjs.Shape();
+        // shape.graphics.beginFill("#000").drawCircle(0, 0, 100);
+        // shape.x = 100;
+        // shape.y = 100;
+        // bg.mask = shape;     //给图片bg添加遮罩
 
         // 滤镜效果
-        var blur = new createjs.BlurFilter(5,5,1);
-        bg.filters = [blur];
-        bg.cache(0,0,bg.image.width,bg.image.height);
-        stage.addChild(shape);
+        // var blur = new createjs.BlurFilter(5,5,1);
+        // bg.filters = [blur];
+        // bg.cache(0,0,bg.image.width,bg.image.height);
+        // stage.addChild(shape);
+        // stage.addChild(bg);
+        // stage.update();
+
+        var bg = new createjs.Bitmap('./assets/2.jpg');
+        bg.x = 10;
+        bg.y = 10;
+        var rect = new createjs.Rectangle(0,0,121,171);
+        bg.sourceRect = rect;
         stage.addChild(bg);
         stage.update();
     </script>
