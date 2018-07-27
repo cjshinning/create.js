@@ -32,10 +32,15 @@
         bg.y = 0;
         //遮罩图形
         var shape = new createjs.Shape();
-        shape.graphics.beginFill("#0f0").drawCircle(0, 0, 100);
+        shape.graphics.beginFill("#000").drawCircle(0, 0, 100);
         shape.x = 100;
         shape.y = 100;
         bg.mask = shape;     //给图片bg添加遮罩
+
+        // 滤镜效果
+        var blur = new createjs.BlurFilter(5,5,1);
+        bg.filters = [blur];
+        bg.cache(0,0,bg.image.width,bg.image.height);
         stage.addChild(shape);
         stage.addChild(bg);
         stage.update();
