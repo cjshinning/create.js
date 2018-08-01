@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.cnblogs.com/beidan/p/7122731.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="origin">
+<title>createjs 小游戏开发实战 - beidan - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./createjs 小游戏开发实战 - beidan - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./createjs 小游戏开发实战 - beidan - 博客园_files/bundle-iMetro.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./createjs 小游戏开发实战 - beidan - 博客园_files/bundle-iMetro-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/beidan/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/beidan/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/beidan/wlwmanifest.xml">
+<script async="" src="./createjs 小游戏开发实战 - beidan - 博客园_files/analytics.js.下载"></script><script type="text/javascript" src="./createjs 小游戏开发实战 - beidan - 博客园_files/encoder.js.下载"></script><script src="./createjs 小游戏开发实战 - beidan - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+<script type="text/javascript">var currentBlogApp = 'beidan', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./createjs 小游戏开发实战 - beidan - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/beidan/"><img id="blogLogo" src="./createjs 小游戏开发实战 - beidan - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/beidan/">beidan</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/beidan/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/beidan">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/beidan/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/beidan/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 35&nbsp; </span>
+<span id="stats_article_count">文章 - 2&nbsp; </span>
+<span id="stats-comment_count">评论 - 117</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/beidan/p/7122731.html">createjs 小游戏开发实战</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>【转载请注明出处】</p>
+<p>紧接着上一篇文章<a href="http://www.cnblogs.com/beidan/p/7055422.html" target="_blank">createjs入门</a>：<a href="http://www.cnblogs.com/beidan/p/7055422.html" target="_blank">http://www.cnblogs.com/beidan/p/7055422.html</a></p>
+<p>这里来一篇小游戏实战篇。</p>
+<p>&nbsp;</p>
+<p>效果图：（录屏的时候有点卡）</p>
+<pre><span><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/910706-20170707164034456-1593675354.gif" alt="" width="162" height="288"></span></pre>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px"><strong><span style="color: #ff0000"><a href="https://github.com/beidan/canvas/tree/master/demo/car" target="_blank">&nbsp;demo地址</a>：<span style="color: #000000"><strong>https://github.com/beidan/canvas/tree/master/demo/car。</strong>如果对你有用，请点</span></span><span style="color: #ff0000">star</span><span style="color: #ff0000"><span style="color: #000000">～</span></span></strong></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px"><strong style="color: #ff0000">游戏整体思路实现</strong></span></p>
+<p><span style="font-size: 16px"><strong>1. 实现一个无缝连接的背景图，模拟出汽车在加速的状态</strong></span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff">this</span>.backdrop = <span style="color: #0000ff">new</span><span style="color: #000000"> createjs.Bitmap(bg);
+</span><span style="color: #0000ff">this</span>.backdrop.x = 0<span style="color: #000000">;
+</span><span style="color: #0000ff">this</span>.backdrop.y = 0<span style="color: #000000">;
+</span><span style="color: #0000ff">this</span><span style="color: #000000">.stage.addChild(that.backdrop);
+</span><span style="color: #0000ff">this</span>.w =<span style="color: #000000"> bg.width;
+</span><span style="color: #0000ff">this</span>.h =<span style="color: #000000"> bg.height;
+
+</span><span style="color: #008000">//</span><span style="color: #008000">创建一个背景副本，无缝连接</span>
+<span style="color: #0000ff">var</span> copyy = -<span style="color: #000000">bg.height;
+</span><span style="color: #0000ff">this</span>.copy = <span style="color: #0000ff">new</span><span style="color: #000000"> createjs.Bitmap(bg);
+</span><span style="color: #0000ff">this</span>.copy.x = 0<span style="color: #000000">;
+</span><span style="color: #0000ff">this</span>.copy.y = copyy;  <span style="color: #008000">//</span><span style="color: #008000">在画布上y轴的坐标为负的背景图长</span><span style="color: #008000">
+//</span><span style="color: #008000">使用createjs的tick函数，逐帧刷新舞台</span>
+createjs.Ticker.addEventListener("tick"<span style="color: #000000">, tick);
+</span><span style="color: #0000ff">function</span><span style="color: #000000"> tick(e) {
+   </span><span style="color: #0000ff">if</span> (e.paused !== 1<span style="color: #000000">) {
+        </span><span style="color: #008000">//</span><span style="color: #008000">舞台逐帧逻辑处理函数</span>
+        that.backdrop.y = that.speed +<span style="color: #000000"> that.backdrop.y;
+        that.copy.y </span>= that.speed +<span style="color: #000000"> that.copy.y;
+
+        </span><span style="color: #0000ff">if</span> (that.copy.y &gt; -40<span style="color: #000000">) {
+              that.backdrop.y </span>= that.copy.y +<span style="color: #000000"> copyy;
+        }
+        </span><span style="color: #0000ff">if</span> (that.copy.y &gt; -copyy - 100<span style="color: #000000">) {
+              that.copy.y </span>= copyy +<span style="color: #000000"> that.backdrop.y;
+        }
+        that.stage.update(e);
+    }          
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px"><strong>2. 随机绘制障碍物</strong></span></p>
+<p>由于一条跑道肯定会有很多障碍物，对于超出屏幕的障碍物我们要进行‘资源回收’，否则游戏到后面会越来越卡顿。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000">//</span><span style="color: #008000"> 删除越界的元素</span>
+<span style="color: #0000ff">for</span> (<span style="color: #0000ff">var</span> i = 0, flag = <span style="color: #0000ff">true</span>, len = that.props.length; i &lt; len; flag ? i++<span style="color: #000000"> : i) {
+    </span><span style="color: #0000ff">if</span><span style="color: #000000"> (that.props[i]) {
+        </span><span style="color: #0000ff">if</span> (that.props[i].y &gt; height + 300<span style="color: #000000">) {
+            that.stage.removeChild(that.props[i]);
+            that.props.splice(i, </span>1<span style="color: #000000">);
+            flag </span>= <span style="color: #0000ff">false</span><span style="color: #000000">;
+        } </span><span style="color: #0000ff">else</span><span style="color: #000000"> {
+            flag </span>= <span style="color: #0000ff">true</span><span style="color: #000000">;
+        }
+    }
+}</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p data-source-line="73">一共有3条赛道，我们不能出现3个道具同时出现在水平线上，因此我们会随机取1～2个值绘制障碍物。所有游戏我们都应该有参数去控制它的难易程度，免得临上线的时候，老板体验之后觉得游戏太难了……那就非常地尴尬了。 因此，我们会设置加速物体，减速物体，炸弹出现的比例，后期可以调整这个比例来设置游戏的难易程度。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff">var</span> num = parseInt(2 * Math.random()) + 1<span style="color: #000000">, i;
+    </span><span style="color: #0000ff">for</span> (i = 0; i &lt; num; i++<span style="color: #000000">) {
+        </span><span style="color: #0000ff">var</span> type = parseInt(10 * Math.random()) + 1<span style="color: #000000">;
+
+        </span><span style="color: #008000">//</span><span style="color: #008000"> 设置道具出现比例</span>
+        <span style="color: #0000ff">if</span> (type == 1<span style="color: #000000">) {
+            </span>/绘制炸弹
+        } <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> ((type &gt;= 2) &amp;&amp; (type &lt;= 5<span style="color: #000000">)) {
+            </span><span style="color: #008000">//</span><span style="color: #008000">绘制加速道具</span>
+        } <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> ((type &gt;= 6) &amp;&amp; (type &lt;= 10<span style="color: #000000">)) {
+            </span><span style="color: #008000">//</span><span style="color: #008000">绘制减速道具</span>
+<span style="color: #000000">        }
+    }</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p data-source-line="91">第一次绘制完障碍物之后，会随机时间绘制下一次的障碍物。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff">var</span> time = (parseInt(3 * Math.random()) + 1);  <span style="color: #008000">//</span><span style="color: #008000">随机取1～3整数</span><span style="color: #008000">
+//</span><span style="color: #008000"> 随机时间绘制障碍物</span>
+setTimeout(<span style="color: #0000ff">function</span><span style="color: #000000"> () {
+    that.propsTmp </span>= [];  <span style="color: #008000">//</span><span style="color: #008000">清空</span>
+<span style="color: #000000">    that.drawObstacle(obj);
+}, time </span>* 400);  <span style="color: #008000">//</span><span style="color: #008000">400ms ~ 1200ms</span></pre>
+</div>
+<p>&nbsp;</p>
+<p><strong><span style="font-size: 16px">3.碰撞检测 </span></strong></p>
+<p>我们用一个数组来存放汽车占的矩形区域，障碍物占的矩形区域，在每一次tick的时候循环遍历数组，看是否有重叠的，若有重叠，则发生了碰撞。</p>
+<p>&nbsp;</p>
+<p><strong><span style="color: #ff0000">createjs的一些小知识：</span></strong></p>
+<p>1. 暂停和恢复舞台渲染&nbsp;</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #000000">createjs.Ticker.addEventListener(“tick”, tick); 
+</span><span style="color: #0000ff">function</span><span style="color: #000000"> tick(e) { 
+    </span><span style="color: #0000ff">if</span> (e.paused === 1<span style="color: #000000">) { 
+    </span><span style="color: #008000">//</span><span style="color: #008000">处理 </span>
+<span style="color: #000000">    }
+}     
+createjs.Ticker.paused </span>= 1; <span style="color: #008000">//</span><span style="color: #008000">在函数任何地方调用这个，则会暂停tick里面的处理 createjs.Ticker.paused = 0; //恢复游戏</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>2. 由于汽车会有加速，减速，弹气泡的效果。因此我们把这几个效果绘制在同一个container中，方便统一管理,对这些效果设置name属性，之后可以直接使用getChildByName获取到该对象。</p>
+<div class="cnblogs_code">
+<pre>container.name = ‘role’; <span style="color: #008000">//</span><span style="color: #008000">设置name值</span>
+car = <span style="color: #0000ff">this</span>.stage.getChildByName(“role”);  <span style="color: #008000">//</span><span style="color: #008000">使用name值方便获取到该对象</span></pre>
+</div>
+<p>&nbsp;</p>
+<p>3. 预加载 preload （createjs 的 preload 非常的实用）</p>
+<p>一开始是自己写的预加载，后来发现createjs里面对图片是有跨域处理的，自己处理跨域的img就比较麻烦，所以直接使用createjs的预加载。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>//放置静态资源的数组
+var manifest =<span> [
+    {src: __uri('./images/car_prop2_tyre@2x.png'), id: 'tyre'<span>}
+];
+var queue = new<span> createjs.LoadQueue();
+queue.on('complete', handleComplete, this<span>);
+queue.loadManifest(manifest);
+//资源加载成功后,进行处理
+function<span> handleComplete() {
+   var tyre = queue.getResult('tyre');  //拿到加载成功后的img
+}</span></span></span></span></span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p data-source-line="127">一般做一个游戏，我们正常都会构建一个游戏类来承载。 下面是一个游戏正常有的接口:</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre>;(<span style="color: #0000ff">function</span><span style="color: #000000"> () {
+    </span><span style="color: #0000ff">function</span><span style="color: #000000"> CarGame(){}
+    CarGame.prototype </span>=<span style="color: #000000"> {
+        init:</span><span style="color: #0000ff">function</span><span style="color: #000000">(manifest) {
+            </span><span style="color: #0000ff">this</span>.preLoad(manifest);  <span style="color: #008000">//</span><span style="color: #008000">资源预加载</span>
+            <span style="color: #008000">//</span><span style="color: #008000">时间倒计时</span>
+            <span style="color: #0000ff">this</span>.prepare(3, 3);  <span style="color: #008000">//</span><span style="color: #008000">倒计时3秒</span>
+            <span style="color: #0000ff">this</span><span style="color: #000000">.bindEvent(); 
+        },
+        render:</span><span style="color: #0000ff">function</span><span style="color: #000000">() {
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.drawBg(bg1);
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.drawRole(car, effbomb, effquick);
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.drawObstacle(obj);
+        },
+        </span><span style="color: #008000">//</span><span style="color: #008000">在游戏结束的时候批量销毁</span>
+        destroy:<span style="color: #0000ff">function</span><span style="color: #000000">(){
+            </span><span style="color: #008000">//</span><span style="color: #008000">移除tick事件</span>
+            createjs.Ticker.removeEventListener("tick", <span style="color: #0000ff">this</span><span style="color: #000000">.tick);
+            </span><span style="color: #008000">//</span><span style="color: #008000">暂停里程，倒计时</span>
+            clearInterval(<span style="color: #0000ff">this</span><span style="color: #000000">.changem);
+            clearTimeout(</span><span style="color: #0000ff">this</span><span style="color: #000000">.gametime);
+        }，
+        </span><span style="color: #008000">//</span><span style="color: #008000">由于期间用户可能切出程序进行其他操作，因此都需要一个暂停的接口</span>
+        pause:<span style="color: #0000ff">function</span><span style="color: #000000">() {
+            </span><span style="color: #008000">//</span><span style="color: #008000">暂停里程，倒计时</span>
+            clearInterval(<span style="color: #0000ff">this</span><span style="color: #000000">.changem);
+            clearTimeout(</span><span style="color: #0000ff">this</span><span style="color: #000000">.gametime);
+
+            </span><span style="color: #008000">//</span><span style="color: #008000">暂停页面滚动</span>
+            createjs.Ticker.paused = 1<span style="color: #000000">;
+        },
+        </span><span style="color: #008000">//</span><span style="color: #008000">重新开始游戏</span>
+        reStart:<span style="color: #0000ff">function</span><span style="color: #000000">(){
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.destroy();
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.init(manifest);
+        },
+        gameOver:</span><span style="color: #0000ff">function</span><span style="color: #000000">(){
+           </span><span style="color: #008000">//</span><span style="color: #008000">显示爆炸效果</span>
+           <span style="color: #0000ff">var</span> car = <span style="color: #0000ff">this</span>.stage.getChildByName("role"<span style="color: #000000">);
+           car.getChildByName(</span>'bomb').visible = <span style="color: #0000ff">true</span><span style="color: #000000">;
+           car.getChildByName(</span>'quick').visible = <span style="color: #0000ff">false</span><span style="color: #000000">;
+           </span><span style="color: #0000ff">this</span><span style="color: #000000">.destroy();
+        }
+    }
+})()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/beidan/tag/createjs/">createjs</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7122731,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;7eeb66d6-cbe6-e511-9fc1-ac853d9f53cc&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/beidan/" target="_blank"><img src="./createjs 小游戏开发实战 - beidan - 博客园_files/20170111180049.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/beidan/">beidan</a><br>
+            <a href="http://home.cnblogs.com/u/beidan/followees">关注 - 23</a><br>
+            <a href="http://home.cnblogs.com/u/beidan/followers">粉丝 - 191</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;7eeb66d6-cbe6-e511-9fc1-ac853d9f53cc&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(7122731,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">2</span>
+    </div>
+    <div class="buryit" onclick="votePost(7122731,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/beidan/p/7049007.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/beidan/p/7049007.html" title="发布于2017-06-21 09:46">前端实现连连看小游戏（1）</a><br><a href="http://www.cnblogs.com/beidan/p/7053515.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/beidan/p/7053515.html" title="发布于2017-07-10 15:20">javascript 玩转Date对象</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2017-07-06 15:41</span> <a href="http://www.cnblogs.com/beidan/">beidan</a> 阅读(<span id="post_view_count">1744</span>) 评论(<span id="post_comment_count">11</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=7122731" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/beidan/p/7122731.html#" onclick="AddToWz(7122731);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=272195,cb_entryId=7122731,cb_blogApp=currentBlogApp,cb_blogUserGuid='7eeb66d6-cbe6-e511-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/7/6 15:41:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<br>
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3729868" class="layer">#1楼</a><a name="3729868" id="comment_anchor_3729868"></a>  <span class="comment_date">2017-07-06 16:31</span> <a id="a_comment_author_3729868" href="http://www.cnblogs.com/ouyang90/" target="_blank">ouyang90</a> <a href="http://msg.cnblogs.com/send/ouyang90" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3729868" class="blog_comment_body">很赞，可以出一个系列，期待后续，加油</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3729868,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3729868,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3735458" class="layer">#2楼</a><a name="3735458" id="comment_anchor_3735458"></a>  <span class="comment_date">2017-07-14 17:22</span> <a id="a_comment_author_3735458" href="http://www.cnblogs.com/wsir/" target="_blank">keep up</a> <a href="http://msg.cnblogs.com/send/keep%20up" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3735458" class="blog_comment_body">有demo吗？能发一下demo，我有点懒<img src="./createjs 小游戏开发实战 - beidan - 博客园_files/636088-20170714172225243-2026156569.jpg" alt="" border="0" "=""></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3735458,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3735458,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3735458_avatar" style="display:none;">http://pic.cnblogs.com/face/636088/20140522102005.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3735461" class="layer">#3楼</a><a name="3735461" id="comment_anchor_3735461"></a>  <span class="comment_date">2017-07-14 17:25</span> <a id="a_comment_author_3735461" href="http://www.cnblogs.com/wsir/" target="_blank">keep up</a> <a href="http://msg.cnblogs.com/send/keep%20up" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3735461" class="blog_comment_body">楼主楼主</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3735461,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3735461,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3735461_avatar" style="display:none;">http://pic.cnblogs.com/face/636088/20140522102005.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3738890" class="layer">#4楼</a><a name="3738890" id="comment_anchor_3738890"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2017-07-19 14:29</span> <a id="a_comment_author_3738890" href="http://www.cnblogs.com/beidan/" target="_blank">beidan</a> <a href="http://msg.cnblogs.com/send/beidan" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3738890" class="blog_comment_body"><a href="https://www.cnblogs.com/beidan/p/7122731.html#3735458" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3735458);">@</a>
+keep up<br>demo 地址 ：<a href="https://github.com/beidan/canvas/tree/master/demo/car" target="_blank">https://github.com/beidan/canvas/tree/master/demo/car</a> ，如果对你有用的话，记得点下star或者fork～</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3738890,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3738890,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3738890_avatar" style="display:none;">http://pic.cnblogs.com/face/910706/20170111180049.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3796864" class="layer">#5楼</a><a name="3796864" id="comment_anchor_3796864"></a>  <span class="comment_date">2017-09-26 10:59</span> <a id="a_comment_author_3796864" href="http://home.cnblogs.com/u/1247834/" target="_blank">痴空见观</a> <a href="http://msg.cnblogs.com/send/%E7%97%B4%E7%A9%BA%E8%A7%81%E8%A7%82" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3796864" class="blog_comment_body">楼主，您的代码有一块我不是很明白，望指点lw96@live.com: Event.prototype中的dispatch方法。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3796864,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3796864,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3797541" class="layer">#6楼</a><a name="3797541" id="comment_anchor_3797541"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2017-09-26 18:14</span> <a id="a_comment_author_3797541" href="http://www.cnblogs.com/beidan/" target="_blank">beidan</a> <a href="http://msg.cnblogs.com/send/beidan" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3797541" class="blog_comment_body"><a href="https://www.cnblogs.com/beidan/p/7122731.html#3796864" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3796864);">@</a>
+痴空见观<br>这个 Event 是使用 “订阅发布模式”实现页面间通信，主要是封装好 car 类，比如：我超过1000米了，我需要处理一些事情，那我只要用这个发布事件，在想要处理的地方监听这个事件，就可以了。网上有很多相关的文章，可以搜一下</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3797541,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3797541,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3797541_avatar" style="display:none;">http://pic.cnblogs.com/face/910706/20170111180049.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3798452" class="layer">#7楼</a><a name="3798452" id="comment_anchor_3798452"></a>  <span class="comment_date">2017-09-27 16:00</span> <a id="a_comment_author_3798452" href="http://home.cnblogs.com/u/1247834/" target="_blank">痴空见观</a> <a href="http://msg.cnblogs.com/send/%E7%97%B4%E7%A9%BA%E8%A7%81%E8%A7%82" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3798452" class="blog_comment_body">@beidan 感谢你，我在网上找到了相关的资料: <a href="https://github.com/Kelichao/javascript.basics/issues/22" target="_blank">https://github.com/Kelichao/javascript.basics/issues/22</a>，您的demo游戏结束之后，我没有看到界面，也没有重新开始按钮。<br><br>我谈一下我的想法，你看看我理解的对不对：<br><br><a href="https://github.com/beidan/canvas/blob/master/demo/car/index.js#L454" target="_blank">https://github.com/beidan/canvas/blob/master/demo/car/index.js#L454</a><br>这个地方that.event.dispatch("timeout");相当于是通知对象有一个timeout的事件，而timeout具体做的事情，由<a href="https://github.com/beidan/canvas/blob/master/demo/car/index.html#L172%E8%BF%99%E4%B8%AA%E5%9C%B0%E6%96%B9%E5%AE%9A%E4%B9%89" target="_blank">https://github.com/beidan/canvas/blob/master/demo/car/index.html#L172这个地方定义</a>：game.destroy();就是把game对象给destroy掉。</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3798452,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3798452,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3799543" class="layer">#8楼</a><a name="3799543" id="comment_anchor_3799543"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2017-09-28 15:49</span> <a id="a_comment_author_3799543" href="http://www.cnblogs.com/beidan/" target="_blank">beidan</a> <a href="http://msg.cnblogs.com/send/beidan" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3799543" class="blog_comment_body"><a href="https://www.cnblogs.com/beidan/p/7122731.html#3798452" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3798452);">@</a>
+痴空见观<br>是的～</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3799543,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3799543,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3799543_avatar" style="display:none;">http://pic.cnblogs.com/face/910706/20170111180049.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3969247" class="layer">#9楼</a><a name="3969247" id="comment_anchor_3969247"></a>  <span class="comment_date">2018-05-07 16:39</span> <a id="a_comment_author_3969247" href="http://www.cnblogs.com/mengff/" target="_blank">看风景就</a> <a href="http://msg.cnblogs.com/send/%E7%9C%8B%E9%A3%8E%E6%99%AF%E5%B0%B1" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3969247" class="blog_comment_body">demo报错啊，游戏不能完全运行，车碰到雷就报错<img src="./createjs 小游戏开发实战 - beidan - 博客园_files/636026-20180507163945870-1802056392.png" alt="" border="0" "=""></div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3969247,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3969247,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3969941" class="layer">#10楼</a><a name="3969941" id="comment_anchor_3969941"></a>[<span class="louzhu">楼主</span>]  <span class="comment_date">2018-05-08 12:52</span> <a id="a_comment_author_3969941" href="http://www.cnblogs.com/beidan/" target="_blank">beidan</a> <a href="http://msg.cnblogs.com/send/beidan" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3969941" class="blog_comment_body"><a href="https://www.cnblogs.com/beidan/p/7122731.html#3969247" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3969247);">@</a>
+看风景就<br>提示图片找不到，你看下能不能访问到图片</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3969941,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3969941,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3969941_avatar" style="display:none;">http://pic.cnblogs.com/face/910706/20170111180049.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="https://www.cnblogs.com/beidan/p/7122731.html#3971732" class="layer">#11楼</a><a name="3971732" id="comment_anchor_3971732"></a><span id="comment-maxId" style="display:none;">3971732</span><span id="comment-maxDate" style="display:none;">2018/5/10 18:04:54</span>  <span class="comment_date">2018-05-10 18:04</span> <a id="a_comment_author_3971732" href="http://www.cnblogs.com/mengff/" target="_blank">看风景就</a> <a href="http://msg.cnblogs.com/send/%E7%9C%8B%E9%A3%8E%E6%99%AF%E5%B0%B1" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3971732" class="blog_comment_body"><a href="https://www.cnblogs.com/beidan/p/7122731.html#3969941" title="查看所回复的评论" onclick="commentManager.renderComments(0,50,3969941);">@</a>
+beidan<br>图片确实没有啊，不过不是关键，下面的那个innerText错误才是关键，在getMil方法中，一个dom获取的结果为null，我再html中未搜索到这个对象，<br>不知道是否楼主更新时有东西删错了，楼主自己本地能运行完整吗，尤其是<br>撞雷，game over的时候？</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3971732,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3971732,&#39;Bury&#39;,this)">反对(0)</a></div>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/beidan/p/7122731.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/beidan/p/7122731.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】超50万VC++源码: 大型组态工控、电力仿真CAD与GIS源码库！</a><br><a href="https://www.grapecity.com.cn/developer/spreadjs?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-T2-Spread&#39;)">【前端】SpreadJS表格控件，可嵌入应用开发的在线Excel</a><br><a href="https://cloud.tencent.com/developer/labs?fromSource=gwzcw.1087957.1087957.1087957" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-T2 - 腾讯云&#39;)">【推荐】如何快速搭建人工智能应用？</a><br><a href="https://cloud.tencent.com/developer/salon/activity-1078?fromSource=gwzcw.1110771.1110771.1110771" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-T2-AI&#39;)">【活动】AI技术全面场景化落地实践</a><br><a href="http://challenge.xfyun.cn/?ch=bk" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-xfyun&#39;)">【大赛】2018首届“顶天立地”AI开发者大赛</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://cloud.tencent.com/act/campus?fromSource=gwzcw.1087959.1087959.1087959" target="_blank"><img width="300" height="250" src="./createjs 小游戏开发实战 - beidan - 博客园_files/24442-20180710085714894-1703644023.jpg" alt="腾讯云0710" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;C1&#39;);"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/602907/" target="_blank">“火星叔叔”郑永春谈液态水新发现：移民火星已经不是科幻了</a><br> ·  <a href="https://news.cnblogs.com/n/602905/" target="_blank">亚马逊Echo遭谷歌Home反超 智能音箱的未来在哪里？</a><br> ·  <a href="https://news.cnblogs.com/n/602875/" target="_blank">火星生命的证据可能就隐藏在“幽灵沙丘”中</a><br> ·  <a href="https://news.cnblogs.com/n/602897/" target="_blank">滴滴一下，您的车还需要等待120分钟</a><br> ·  <a href="https://news.cnblogs.com/n/602881/" target="_blank">Facebook成立脸书科技意欲入华？或许只是一个小动作</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/9667/" target="_blank"><img src="https://gw.alicdn.com/tfs/TB1iQKbhqmWBuNjy1XaXXXCbXXa-468-60.jpg" alt="" style="width: 468px; height: 60px;"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/602573/" target="_blank">如何提高代码质量？</a><br> ·  <a href="http://kb.cnblogs.com/page/602486/" target="_blank">在腾讯的八年，我的职业思考</a><br> ·  <a href="http://kb.cnblogs.com/page/602163/" target="_blank">为什么我离开了管理岗位</a><br> ·  <a href="http://kb.cnblogs.com/page/602053/" target="_blank">那些让人睡不着觉的bug，你有没有遭遇过？</a><br> ·  <a href="http://kb.cnblogs.com/page/602061/" target="_blank">观察之道：带你走进可观察性</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/beidan/">beidan</a><br>园龄：<a href="https://home.cnblogs.com/u/beidan/" title="入园时间：2016-03-10">2年4个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/beidan/followers/">191</a><br>关注：<a href="https://home.cnblogs.com/u/beidan/followees/">23</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;7eeb66d6-cbe6-e511-9fc1-ac853d9f53cc&#39;)">+加关注</a></div><script>getFollowStatus('7eeb66d6-cbe6-e511-9fc1-ac853d9f53cc')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/06/01&#39;);return false;">&lt;</a></td><td align="center">2018年7月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/08/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td></tr><tr><td class="CalWeekendDay" align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td class="CalWeekendDay" align="center">7</td></tr><tr><td class="CalWeekendDay" align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td class="CalWeekendDay" align="center">14</td></tr><tr><td class="CalWeekendDay" align="center">15</td><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td class="CalWeekendDay" align="center">21</td></tr><tr><td class="CalWeekendDay" align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td class="CalTodayDay" align="center">27</td><td class="CalWeekendDay" align="center">28</td></tr><tr><td class="CalWeekendDay" align="center">29</td><td align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/beidan/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/beidan/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/beidan/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/beidan/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/beidan/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/beidan/tag/javascript/">javascript</a>(4)</li><li><a href="http://www.cnblogs.com/beidan/tag/html/">html</a>(3)</li><li><a href="http://www.cnblogs.com/beidan/tag/vue/">vue</a>(3)</li><li><a href="http://www.cnblogs.com/beidan/tag/createjs/">createjs</a>(2)</li><li><a href="http://www.cnblogs.com/beidan/tag/css/">css</a>(2)</li><li><a href="http://www.cnblogs.com/beidan/tag/js%E6%8F%92%E4%BB%B6/">js插件</a>(2)</li><li><a href="http://www.cnblogs.com/beidan/tag/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>(2)</li><li><a href="http://www.cnblogs.com/beidan/tag/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9F%A5%E8%AF%86/">移动端知识</a>(1)</li><li><a href="http://www.cnblogs.com/beidan/tag/js%E5%AD%98%E5%82%A8/">js存储</a>(1)</li><li><a href="http://www.cnblogs.com/beidan/tag/js%E5%B0%8F%E6%B8%B8%E6%88%8F/">js小游戏</a>(1)</li><li><a href="http://www.cnblogs.com/beidan/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="https://www.cnblogs.com/beidan/archive/2017/12.html">2017年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="https://www.cnblogs.com/beidan/archive/2017/07.html">2017年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="https://www.cnblogs.com/beidan/archive/2017/06.html">2017年6月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="https://www.cnblogs.com/beidan/archive/2017/05.html">2017年5月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="https://www.cnblogs.com/beidan/archive/2017/04.html">2017年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="https://www.cnblogs.com/beidan/archive/2017/03.html">2017年3月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="https://www.cnblogs.com/beidan/archive/2017/02.html">2017年2月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="https://www.cnblogs.com/beidan/archive/2017/01.html">2017年1月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="https://www.cnblogs.com/beidan/archive/2016/12.html">2016年12月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="https://www.cnblogs.com/beidan/archive/2016/10.html">2016年10月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="https://www.cnblogs.com/beidan/archive/2016/09.html">2016年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="https://www.cnblogs.com/beidan/archive/2016/08.html">2016年8月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="https://www.cnblogs.com/beidan/archive/2016/07.html">2016年7月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="https://www.cnblogs.com/beidan/archive/2016/04.html">2016年4月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="https://www.cnblogs.com/beidan/archive/2016/03.html">2016年3月 (10)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/beidan/p/7122731.html#3971732">1. Re:createjs 小游戏开发实战</a></li>
+        <li class="recent_comment_body">@beidan图片确实没有啊，不过不是关键，下面的那个innerText错误才是关键，在getMil方法中，一个dom获取的结果为null，我再html中未搜索到这个对象，不知道是否楼主更新时有东西删......</li>
+        <li class="recent_comment_author">--看风景就</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/beidan/p/6129891.html#3971345">2. Re:vue2.0 开发实践总结之入门篇</a></li>
+        <li class="recent_comment_body">@Jason-node可以用吗...</li>
+        <li class="recent_comment_author">--黑夜彩虹123</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/beidan/p/6129891.html#3971343">3. Re:vue2.0 开发实践总结之入门篇</a></li>
+        <li class="recent_comment_body">楼主，一进去就是数据一直加载中啊  咋搞了</li>
+        <li class="recent_comment_author">--黑夜彩虹123</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/beidan/p/7122731.html#3969941">4. Re:createjs 小游戏开发实战</a></li>
+        <li class="recent_comment_body">@看风景就提示图片找不到，你看下能不能访问到图片...</li>
+        <li class="recent_comment_author">--beidan</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/beidan/p/7122731.html#3969247">5. Re:createjs 小游戏开发实战</a></li>
+        <li class="recent_comment_body">demo报错啊，游戏不能完全运行，车碰到雷就报错</li>
+        <li class="recent_comment_author">--看风景就</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="https://www.cnblogs.com/beidan/p/5275379.html">1. rem详解及使用方法(20268)</a></li><li><a href="https://www.cnblogs.com/beidan/p/6129891.html">2. vue2.0 开发实践总结之入门篇(18116)</a></li><li><a href="https://www.cnblogs.com/beidan/p/7055422.html">3. 一篇文章带你快速入门createjs(6524)</a></li><li><a href="https://www.cnblogs.com/beidan/p/vue.html">4. vue 2.0 开发实践总结之疑难篇(5896)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5269817.html">5. json跨域原理及解决方法(4045)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="https://www.cnblogs.com/beidan/p/6129891.html">1. vue2.0 开发实践总结之入门篇(19)</a></li><li><a href="https://www.cnblogs.com/beidan/p/7122731.html">2. createjs 小游戏开发实战(11)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5285742.html">3. 阿里前端笔试题目(10)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5648240.html">4. 图片懒加载插件实战(8)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5353117.html">5. html 空格-有趣的试验(8)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="https://www.cnblogs.com/beidan/p/5848755.html">1. 移动开发实践及‘坑’总结(12)</a></li><li><a href="https://www.cnblogs.com/beidan/p/6129891.html">2. vue2.0 开发实践总结之入门篇(9)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5648240.html">3. 图片懒加载插件实战(9)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5275379.html">4. rem详解及使用方法(8)</a></li><li><a href="https://www.cnblogs.com/beidan/p/5353117.html">5. html 空格-有趣的试验(7)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 beidan
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>
