@@ -10,13 +10,27 @@
         function init(){
             var stage = new createjs.Stage('game');
 
+            var button = new createjs.Container();
+
+            var label = new createjs.Text('OK','20px Times','#000');
+            label.textAlign = 'center';
+            label.textBaseline = 'middle';
+
             var shape = new createjs.Shape();
-            shape.graphics.beginStroke("#000").beginFill("red").drawRect(0, 0, 100, 100);
-            shape.x = shape.y = 0;
+            shape.graphics.beginFill("#ff0000").drawCircle(0, 0, 50);
             shape.shadow = new createjs.Shadow('#000',5,5,8);
 
-            stage.addChild(shape);
+            button.addChild(shape, label);
+            button.regX = shape.width/2;
+            button.regY = shape.height/2;
+            button.x = 100;
+            button.y = 100;
+            button.cursor = 'pointer';
+            label.x = button.regX;
+            label.y = 50;
 
+            stage.addChild(button);
+            stage.enableMouseOver();
             stage.update();
         }
     </script>
