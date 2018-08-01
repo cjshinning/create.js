@@ -10,13 +10,12 @@
         function init(){
             var stage = new createjs.Stage('game');
 
-            var txt = new createjs.Text('Hello','20px Times','#000');
+            var shape = new createjs.Shape();
+            shape.graphics.beginStroke("#000").beginFill("red").drawRect(0, 0, 100, 100);
+            shape.x = shape.y = 0;
+            shape.shadow = new createjs.Shadow('#000',5,5,8);
 
-            txt.x = 100;
-            txt.y = 100;
-            txt.text = 'hello, world!';
-
-            stage.addChild(txt);
+            stage.addChild(shape);
 
             stage.update();
         }
