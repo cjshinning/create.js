@@ -8,81 +8,36 @@
     <title>createjs</title>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
     <script>
-        // 画板
-        var canvas, stage;
-        var drawingCanvas;
-        var oldPt;
-        var oldMidPt;
-        var title;
-        var color;
-        var stroke;
-        var colors;
-        var index;
+        var stage,shape,bg;
+        function init(){
+            stage = new createjs.Stage('game');
 
-        function init() {
-            canvas = document.getElementById("game");
-            index = 0;
-            colors = ["#828b20", "#b0ac31", "#cbc53d", "#fad779", "#f9e4ad", "#faf2db", "#563512", "#9b4a0b", "#d36600", "#fe8a00", "#f9a71f"];
+            bg = new createjs.Bitmap('./images/bg.jpg');
+            
+            // 选取图片的一部分显示
+            // var rect = new createjs.Rectangle(100,100,100,100);
+            // bg.sourceRect = rect;
+            
 
-            //check to see if we are running in a browser with touch support
-            stage = new createjs.Stage(canvas);
-            stage.autoClear = false;
-            stage.enableDOMEvents(true);
+            // 给图片添加遮罩
+            // shape = new createjs.Shape();
+            // shape.graphics.beginFill('#000').drawCircle(0,0,100);
+            // shape.x = 200;
+            // shape.y = 100;
+            // bg.mask = shape;
+            // stage.addChild(shape);
 
-            createjs.Touch.enable(stage);
-            createjs.Ticker.setFPS(24);
+            // 给图片添加滤镜
+            var blur = new createjs.BlurFilter(50, 50, 100);
+            bg.filters = [blur];
+            stage.addChild(bg);
+            
+            createjs.Ticker.setFPS(60);
+            createjs.Ticker.addEventListener('tick', update);
+        }
 
-            drawingCanvas = new createjs.Shape();
-
-            drawingCanvas.graphics.clear().setStrokeStyle(20, 'round', 'round').beginStroke('#f00').moveTo(100, 50).curveTo(-100, 500, 500, 500);
-
-            stage.addEventListener("stagemousedown", handleMouseDown);
-            stage.addEventListener("stagemouseup", handleMouseUp);
-
-            title = new createjs.Text("Click and Drag to draw", "36px Arial", "#777777");
-            title.x = 300;
-            title.y = 200;
-            stage.addChild(title);
-
-            stage.addChild(drawingCanvas);
+        function update(e){
             stage.update();
-        }
-
-        function handleMouseDown(event) {
-            if (!event.primary) { return; }
-            if (stage.contains(title)) {
-                stage.clear();
-                stage.removeChild(title);
-            }
-            color = colors[(index++) % colors.length];
-            stroke = Math.random() * 30 + 10 | 0;
-            oldPt = new createjs.Point(stage.mouseX, stage.mouseY);
-            oldMidPt = oldPt.clone();
-            stage.addEventListener("stagemousemove", handleMouseMove);
-        }
-
-        function handleMouseMove(event) {
-            if (!event.primary) { return; }
-            var midPt = new createjs.Point(oldPt.x + stage.mouseX >> 1, oldPt.y + stage.mouseY >> 1);
-            // console.log(midPt.x, midPt.y);
-            // console.log(stage.mouseX, stage.mouseY);
-            // console.log(oldMidPt.x, oldMidPt.y);
-            // console.log('--------------------------')
-
-            drawingCanvas.graphics.clear().setStrokeStyle(stroke, 'round', 'round').beginStroke(color).moveTo(midPt.x, midPt.y).curveTo(oldPt.x, oldPt.y, oldMidPt.x, oldMidPt.y);
-
-            oldPt.x = stage.mouseX;
-            oldPt.y = stage.mouseY;
-
-            oldMidPt.x = midPt.x;
-            oldMidPt.y = midPt.y;
-
-            stage.update();
-        }
-
-        function handleMouseUp(event) {
-            if (!event.primary) { return; }
-            stage.removeEventListener("stagemousemove", handleMouseMove);
         }
     </script>
 </head>
